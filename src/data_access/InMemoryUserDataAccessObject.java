@@ -1,9 +1,12 @@
 package data_access;
 
 import entity.User;
+import use_case.clear_users.ClearUserDataAccessInterface;
 import use_case.signup.SignupUserDataAccessInterface;
 
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class InMemoryUserDataAccessObject implements SignupUserDataAccessInterface {
@@ -19,6 +22,7 @@ public class InMemoryUserDataAccessObject implements SignupUserDataAccessInterfa
         return users.containsKey(identifier);
     }
 
+    public Collection<User> getAll() {return users.values();}
     /**
      * @param user the data to save
      */

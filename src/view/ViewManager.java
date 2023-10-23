@@ -1,6 +1,7 @@
 package view;
 
 import interface_adapter.ViewManagerModel;
+import interface_adapter.clear_users.ClearState;
 
 import javax.swing.*;
 import java.awt.*;
